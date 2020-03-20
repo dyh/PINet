@@ -1,3 +1,4 @@
+tips
 
 #### conda的环境配置见《pinet.yaml》
 
