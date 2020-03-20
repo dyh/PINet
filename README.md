@@ -1,3 +1,13 @@
+
+#### conda的环境配置见《pinet.yaml》
+
+特别注意，如果opencv加载视频失败，需要pip安装下面2个：
+
+1. pip install opencv-python
+2. pip install opencv-contrib-python
+
+
+
 # key points estimation and point instance segmentation approach for lane detection
 
 - Paper : key points estimation and point instance segmentation approach for lane detection

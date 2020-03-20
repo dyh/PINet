@@ -60,8 +60,11 @@ def Testing():
             cv2.waitKey(0) 
 
     elif p.mode == 1: # check model with video
-        cap = cv2.VideoCapture("video_path")
+
+        cap = cv2.VideoCapture("/root/video/demo1.mp4")
+
         while(cap.isOpened()):
+            print('loading video 1')
             ret, frame = cap.read()
             prevTime = time.time()
             frame = cv2.resize(frame, (512,256))/255.0
@@ -73,6 +76,7 @@ def Testing():
             s = "FPS : "+ str(fps)
             cv2.putText(ti[0], s, (0, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0))
             cv2.imshow('frame',ti[0])
+            print('cv2.imshow frame')
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         cap.release()

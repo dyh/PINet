@@ -81,17 +81,17 @@ class Generator(object):
 
         self.size_train = len(self.train_data_two) + len(self.train_data_three) + len(self.train_data_four) + len(self.train_data_five)
 
-        # load test set
-        self.test_data = []
-        with open(self.p.test_root_url+'test_tasks_0627.json') as f:
-            while True:
-                line = f.readline()
-                if not line:
-                    break
-                jsonString = json.loads(line)
-                self.test_data.append(jsonString)
-
-        self.size_test = len(self.test_data)
+#        # load test set
+#        self.test_data = []
+#        with open(self.p.test_root_url+'test_tasks_0627.json') as f:
+#            while True:
+#                line = f.readline()
+#                if not line:
+#                    break
+#                jsonString = json.loads(line)
+#                self.test_data.append(jsonString)
+#
+#        self.size_test = len(self.test_data)
 
     #################################################################################################################
     ## Generate data as much as batchsize and augment data (filp, translation, rotation, gaussian noise, scaling)
